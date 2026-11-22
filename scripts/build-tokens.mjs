@@ -37,9 +37,13 @@ for (const [n, s] of Object.entries(T.typography)) {
   css += `  --${P}-text-${k}-size: ${s.size / 16}rem;\n  --${P}-text-${k}-line: ${s.line / 16}rem;\n`;
 }
 css += '  color-scheme: light;\n}\n\n';
-const darkBlock = (sel) => { let b = `${sel} {\n`; for (const [n, [, d]] of Object.entries(T.semantic)) b += `  --${P}-color-${kebab(n)}: ${primVar(d)};\n`; b += '  color-scheme: dark;\n}\n'; return b; };
+const modeBlock = (sel, mode) => { const i = mode === 'dark' ? 1 : 0; let b = `${sel} {\n`; for (const [n, pair] of Object.entries(T.semantic)) b += `  --${P}-color-${kebab(n)}: ${primVar(pair[i])};\n`; b += `  color-scheme: ${mode};\n}\n`; return b; };
+const darkBlock = (sel) => modeBlock(sel, 'dark');
 css += darkBlock('[data-theme="dark"], .kv-theme-dark') + '\n';
 css += `@media (prefers-color-scheme: dark) {\n  ${darkBlock(':root:not([data-theme="light"])').replace(/\n/g, '\n  ')}\n}\n\n`;
+// Light must be re-declared on [data-theme="light"] too, or a light section nested inside a dark
+// ancestor (Storybook docs, a light card on a dark page) just inherits the dark values.
+css += modeBlock('[data-theme="light"], .kv-theme-light', 'light') + '\n';
 css += `@media (prefers-reduced-motion: reduce) {\n  :root { ${Object.keys(T.motion.duration).map((k) => `--${P}-duration-${k}: 0ms;`).join(' ')} }\n}\n\n`;
 // Text utility classes
 for (const [n, s] of Object.entries(T.typography)) {

@@ -253,6 +253,56 @@
   
 }
 
+[data-theme="light"], .kv-theme-light {
+  --kv-color-bg-canvas: var(--kv-paper-0);
+  --kv-color-bg-raised: var(--kv-paper-50);
+  --kv-color-bg-inverse: var(--kv-ink-1000);
+  --kv-color-bg-action: var(--kv-ink-1000);
+  --kv-color-bg-action-pressed: var(--kv-gray-800);
+  --kv-color-bg-accent: var(--kv-mulberry-700);
+  --kv-color-bg-accent-subtle: var(--kv-paper-50);
+  --kv-color-bg-disabled: var(--kv-paper-100);
+  --kv-color-bg-danger: var(--kv-red-600);
+  --kv-color-text-primary: var(--kv-ink-1000);
+  --kv-color-text-secondary: var(--kv-gray-600);
+  --kv-color-text-tertiary: var(--kv-gray-500);
+  --kv-color-text-disabled: var(--kv-gray-400);
+  --kv-color-text-inverse: var(--kv-paper-0);
+  --kv-color-text-on-action: var(--kv-paper-0);
+  --kv-color-text-on-accent: var(--kv-paper-0);
+  --kv-color-text-accent: var(--kv-mulberry-700);
+  --kv-color-text-live: var(--kv-mulberry-700);
+  --kv-color-text-danger: var(--kv-red-600);
+  --kv-color-border-hairline: var(--kv-gray-200);
+  --kv-color-border-strong: var(--kv-ink-1000);
+  --kv-color-border-input: var(--kv-gray-500);
+  --kv-color-border-focus: var(--kv-mulberry-700);
+  --kv-color-border-danger: var(--kv-red-600);
+  --kv-color-icon-primary: var(--kv-ink-1000);
+  --kv-color-icon-secondary: var(--kv-gray-500);
+  --kv-color-icon-accent: var(--kv-mulberry-700);
+  --kv-color-icon-live: var(--kv-mulberry-700);
+  --kv-color-data-line: var(--kv-ink-1000);
+  --kv-color-data-line-muted: var(--kv-gray-400);
+  --kv-color-data-grid: var(--kv-gray-200);
+  --kv-color-data-highlight: var(--kv-mulberry-700);
+  --kv-color-data-band: var(--kv-paper-100);
+  --kv-color-data-zone-1: var(--kv-gray-400);
+  --kv-color-data-zone-2: var(--kv-gray-500);
+  --kv-color-data-zone-3: var(--kv-gray-700);
+  --kv-color-data-zone-4: var(--kv-ink-1000);
+  --kv-color-data-zone-5: var(--kv-mulberry-700);
+  --kv-color-map-land: var(--kv-paper-0);
+  --kv-color-map-water: var(--kv-paper-100);
+  --kv-color-map-park: var(--kv-paper-50);
+  --kv-color-map-road: var(--kv-gray-200);
+  --kv-color-map-road-major: var(--kv-gray-300);
+  --kv-color-map-label: var(--kv-gray-500);
+  --kv-color-map-route: var(--kv-ink-1000);
+  --kv-color-map-route-live: var(--kv-mulberry-700);
+  color-scheme: light;
+}
+
 @media (prefers-reduced-motion: reduce) {
   :root { --kv-duration-instant: 0ms; --kv-duration-fast: 0ms; --kv-duration-base: 0ms; --kv-duration-slow: 0ms; }
 }
