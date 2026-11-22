@@ -40,7 +40,7 @@ Black and white first, like an LCD — but **no watch screens, no segment digits
 - Two accents only: **Volt** `#D4FF3D` and **Mulberry** `#6B1A4E`. Never introduce another hue.
 - One filled action per screen: `bg/action` (black in light, Volt in dark).
 - Live/latest state uses `text/live` / `data/highlight` / `map/route-live` (mulberry in light, volt in dark). Accent marks *what is live or latest*, never decoration.
-- Hairlines (`border/hairline`) instead of cards and fills. Square corners; pills only for the primary button, tags and the segmented control.
+- Hairlines (`border/hairline`) instead of cards and fills. Square corners; pills only for the primary button and tags.
 - HR zones: single-hue ramp `data/zone-1…5`, Z5 is the accent. Always label Z1–Z5 in text.
 
 ## Type
