@@ -1,7 +1,7 @@
 {
   "name": "@karavaldon/timequake",
   "version": "2.0.0",
-  "description": "Timequake v2 \u2014 Kara Valdon's black-and-white design system for a running PWA that pairs with a watch and a sensor strap.",
+  "description": "Timequake v2 — Kara Valdon's black-and-white design system for a running PWA that pairs with a watch and a sensor strap.",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
@@ -11,7 +11,8 @@
     "check": "npm run tokens && npm run audit:contrast && npm run typecheck",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
-    "a11y": "node scripts/a11y.mjs"
+    "a11y": "node scripts/a11y.mjs",
+    "chromatic": "set -a && . ./.env && set +a && npx chromatic"
   },
   "peerDependencies": {
     "react": ">=18",

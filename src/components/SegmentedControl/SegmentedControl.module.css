@@ -1,4 +1,7 @@
-.root { display: flex; border: 1px solid var(--kv-color-border-strong); border-radius: var(--kv-radius-xs); }
+.root { display: flex; border: 1px solid var(--kv-color-border-strong); border-radius: var(--kv-radius-pill); }
 .seg { flex: 1; min-height: 40px; border: 0; background: transparent; cursor: pointer; font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-primary); }
+/* Round the end segments (not overflow:hidden on .root) so the selected fill follows the pill and focus rings aren't clipped */
+.seg:first-child { border-start-start-radius: var(--kv-radius-pill); border-end-start-radius: var(--kv-radius-pill); }
+.seg:last-child { border-start-end-radius: var(--kv-radius-pill); border-end-end-radius: var(--kv-radius-pill); }
 .seg + .seg { border-left: 1px solid var(--kv-color-border-strong); }
 .seg[aria-checked='true'] { background: var(--kv-color-bg-inverse); color: var(--kv-color-text-inverse); }
