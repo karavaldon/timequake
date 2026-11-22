@@ -1,0 +1,10 @@
+.root { display: grid; gap: 8px; }
+.label { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-secondary); }
+.box { display: flex; align-items: baseline; gap: 8px; border-bottom: 1px solid var(--kv-color-border-input); }
+.box:focus-within { border-bottom: 2px solid var(--kv-color-border-focus); margin-bottom: -1px; }
+.input { flex: 1; min-height: 48px; border: 0; background: transparent; outline: none; font-size: var(--kv-text-body-lg-size); color: var(--kv-color-text-primary); padding: 0; }
+.input::placeholder { color: var(--kv-color-text-tertiary); }
+.suffix { font-family: var(--kv-font-mono); font-size: var(--kv-text-caps-md-size); text-transform: uppercase; letter-spacing: 0.1em; color: var(--kv-color-text-tertiary); }
+.hint { font-size: var(--kv-text-body-sm-size); line-height: var(--kv-text-body-sm-line); color: var(--kv-color-text-secondary); }
+[data-error] .box { border-bottom-color: var(--kv-color-border-danger); }
+[data-error] .hint { color: var(--kv-color-text-danger); }

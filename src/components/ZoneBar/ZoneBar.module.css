@@ -1,0 +1,9 @@
+.root { display: grid; gap: 16px; }
+.bar { display: flex; height: 16px; gap: 2px; }
+.bar > span { display: block; height: 100%; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; }
+.list li { display: grid; grid-template-columns: 12px 32px 1fr auto; align-items: center; gap: 10px; min-height: 36px; border-bottom: 1px solid var(--kv-color-border-hairline); }
+.sw { width: 12px; height: 12px; }
+.z { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; }
+.n { font-size: var(--kv-text-body-sm-size); color: var(--kv-color-text-secondary); }
+.p { font-family: var(--kv-font-mono); font-size: var(--kv-text-data-sm-size); font-variant-numeric: tabular-nums; }

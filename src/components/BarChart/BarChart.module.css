@@ -1,0 +1,7 @@
+.root { margin: 0; }
+.axis { stroke: var(--kv-color-border-strong); }
+.bar { fill: transparent; stroke: var(--kv-color-data-line); stroke-width: 1; }
+.cur { fill: var(--kv-color-data-line); stroke: var(--kv-color-data-line); }
+.cap { fill: var(--kv-color-data-highlight); }
+.value { font-family: var(--kv-font-mono); font-size: 13px; fill: var(--kv-color-text-primary); }
+.tick { font-family: var(--kv-font-mono); font-size: 11px; letter-spacing: 0.05em; fill: var(--kv-color-text-tertiary); text-transform: uppercase; }

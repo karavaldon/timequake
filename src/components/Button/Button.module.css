@@ -1,0 +1,13 @@
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; cursor: pointer; font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-md-size); line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; transition: background var(--kv-duration-fast) var(--kv-ease-standard), color var(--kv-duration-fast); }
+.md { min-height: 48px; padding: 0 24px; }
+.lg { min-height: 56px; padding: 0 32px; }
+.full { width: 100%; }
+.primary { background: var(--kv-color-bg-action); color: var(--kv-color-text-on-action); border-radius: var(--kv-radius-pill); }
+.primary:hover, .primary:active { background: var(--kv-color-bg-action-pressed); }
+.secondary { background: transparent; color: var(--kv-color-text-primary); border: 1px solid var(--kv-color-border-strong); border-radius: var(--kv-radius-xs); }
+.secondary:hover { background: var(--kv-color-bg-raised); }
+.ghost { background: transparent; color: var(--kv-color-text-primary); padding: 0 12px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.btn:disabled { cursor: not-allowed; background: var(--kv-color-bg-disabled); color: var(--kv-color-text-disabled); border-color: transparent; text-decoration: none; }
+.iconBtn { display: inline-grid; place-items: center; width: 48px; height: 48px; border: 0; background: transparent; color: var(--kv-color-icon-primary); cursor: pointer; border-radius: var(--kv-radius-xs); }
+.iconBtn:hover { background: var(--kv-color-bg-raised); }
+.outlineIcon { border: 1px solid var(--kv-color-border-strong); }

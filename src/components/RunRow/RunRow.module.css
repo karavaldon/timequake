@@ -1,0 +1,9 @@
+.row { display: flex; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--kv-color-border-hairline); color: var(--kv-color-text-primary); text-decoration: none; }
+.row:hover { background: var(--kv-color-bg-raised); }
+.thumb { flex: none; width: 56px; height: 56px; object-fit: cover; display: block; border: 1px solid var(--kv-color-border-hairline); }
+.body { flex: 1; display: grid; gap: 6px; min-width: 0; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.date { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }
+.title { font-family: var(--kv-font-serif); font-size: 22px; line-height: 26px; }
+.stats { display: flex; gap: 20px; font-family: var(--kv-font-mono); font-size: var(--kv-text-data-sm-size); font-variant-numeric: tabular-nums; }
+.stats small { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }

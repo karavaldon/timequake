@@ -1,0 +1,60 @@
+import { Meta } from '@storybook/blocks';
+import cover from './assets/cover.jpg';
+import accents from './assets/accents.svg';
+
+<Meta title="Introduction" />
+
+{/* Cover — Figma node 6:2. Sizes scale with the container (Figma frame is 1920 wide: 1cqw = 19.2px). */}
+<div
+  className="sb-unstyled"
+  data-theme="dark"
+  style={{
+    position: 'relative', containerType: 'inline-size', aspectRatio: '16 / 9',
+    display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 24,
+    padding: 'max(24px, 5cqw)', margin: '0 0 32px',
+    background: 'var(--kv-color-bg-canvas)', color: 'var(--kv-color-text-inverse)',
+  }}
+>
+  {/* Clip the photo here, not on the cover, so the 16:9 box can still grow to fit its text on narrow screens */}
+  <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+    <img src={cover} alt="" style={{ position: 'absolute', left: 0, top: '-25.47%', width: '100%', height: '266.67%', maxWidth: 'none' }} />
+  </div>
+  <div className="kv-text-caps-md" style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+    <span>Kara Valdon · design system</span>
+    <span>v2.0 · Nov 2026</span>
+  </div>
+  <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '2.7cqw' }}>
+    <h1 className="kv-text-display-xl" style={{ margin: 0, fontSize: '14.58cqw', lineHeight: 0.9, color: 'inherit' }}>Timequake</h1>
+    <p className="kv-text-body-sm" style={{ margin: 0, maxWidth: 'max(46.875cqw, 280px)', color: 'inherit' }}>A design system made to look and feel good and hopefully make you feel good, too. GPS routes, pace, time, miles, heart rate and HRV logged and read over time, companion to my Timequake KV-93 watch and sensor strap.</p>
+  </div>
+  <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', gap: 16 }}>
+    <img src={accents} alt="" aria-hidden="true" width="64" height="16" style={{ display: 'block' }} />
+  </div>
+</div>
+
+## Principles
+
+1. **Black and white first.** Like an LCD. Hairlines separate things; fills are rare.
+2. **One action, one accent.** `bg/action` is the only filled button on a screen (black in light, Volt in dark). Mulberry and Volt mark what's *live*.
+3. **Numbers are mono.** Every number is Chivo Mono with tabular figures — readable mid-stride, never jumpy.
+4. **Words are human.** Serif headlines speak like a person ("Recovered."), caps labels stay out of the way.
+5. **Casio, not a watch.** Borrow the F-91W's restraint — printed caps, square corners, tight grids — never draw an LCD screen.
+6. **Accessible by construction.** Every color pair is audited (text 4.5:1, graphics 3:1); zones are labelled, not colour-coded; live targets are 72 px.
+
+## Use
+
+```tsx
+import '@karavaldon/timequake/styles';
+import { Button, Stat, RouteMap, LineChart } from '@karavaldon/timequake';
+```
+
+Themes: `data-theme="light" | "dark"` on any ancestor (dark is the default story theme). Tokens live in `tokens/source.mjs` → `npm run tokens`.
+
+## What's here
+
+- **Foundations** — Color (Light/Dark), Typography, Spacing & Shape, Icons.
+- **Core** — Button, Icon Button, Text Field, Switch, Segmented Control, List Row, Tag, Top Bar, Bottom Nav, Sheet, Toast, Device Status.
+- **Running** — Stat, Live Metrics, Route Map (offline SVG), Run Map (Mapbox, B&W from tokens), Line Chart, Bar Chart, Zone Bar, Splits Table, Run Row.
+- **Screens** — Today, Live run, Run detail, Trends, Run log, Gear. Composed only from the above.
+
+Figma: [Timequake](https://www.figma.com/design/unaZRobvOliiSLnm9h4YfI) — same names, same variables.

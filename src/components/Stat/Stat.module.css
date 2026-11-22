@@ -1,0 +1,6 @@
+.stat { display: grid; gap: 6px; justify-items: start; }
+.end { justify-items: end; }
+.label, .unit, .delta { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); line-height: var(--kv-text-caps-sm-line); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }
+.row { display: inline-flex; align-items: baseline; gap: 6px; }
+.live { color: var(--kv-color-text-live); }
+.delta { display: inline-flex; align-items: center; gap: 4px; color: var(--kv-color-text-secondary); }

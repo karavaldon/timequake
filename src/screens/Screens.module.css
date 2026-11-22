@@ -1,0 +1,16 @@
+.phone { width: 390px; min-height: 844px; margin: 0 auto; background: var(--kv-color-bg-canvas); color: var(--kv-color-text-primary); display: flex; flex-direction: column; border: 1px solid var(--kv-color-border-hairline); }
+.main { flex: 1; padding: 0 20px 32px; display: grid; gap: 32px; align-content: start; }
+.section { display: grid; gap: 16px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--kv-color-border-strong); padding-bottom: 8px; }
+.caps { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }
+.capsPrimary { composes: caps; color: var(--kv-color-text-primary); }
+.row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+.hero { padding: 32px 0 8px; display: grid; gap: 12px; }
+.serif { font-family: var(--kv-font-serif); font-size: 40px; line-height: 44px; letter-spacing: -0.02em; margin: 0; font-weight: 400; }
+.body { margin: 0; color: var(--kv-color-text-secondary); font-size: 16px; line-height: 24px; }
+.live { flex: 1; padding: 16px 20px 24px; display: flex; flex-direction: column; gap: 24px; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: auto; }
+.round { width: 72px; height: 72px; border-radius: 999px; border: 1.5px solid var(--kv-color-border-strong); background: transparent; color: var(--kv-color-text-primary); display: grid; place-items: center; cursor: pointer; }
+.roundPrimary { composes: round; background: var(--kv-color-bg-action); border-color: var(--kv-color-bg-action); color: var(--kv-color-text-on-action); width: 88px; height: 88px; }
+.nav { margin-top: auto; } /* in the app: position: sticky; bottom: 0 */

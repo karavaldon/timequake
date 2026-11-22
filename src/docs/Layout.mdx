@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/blocks';
+import { spacing, radius } from '../tokens/tokens';
+
+<Meta title="Foundations/Spacing & Shape" />
+
+# Spacing & shape
+
+A **4-point** grid. Phone first: 390 px, **20 px margins**, 4 columns, 12 px gutters. Mostly **square corners**, like printed matter — pills only for the primary action and tags. No soft shadows: a hairline is the only elevation.
+
+<div className="sb-unstyled" style={{ display: 'grid', gap: 6, margin: '24px 0' }}>
+  {Object.entries(spacing).map(([k, v]) => (
+    <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+      <code className="kv-text-caps-sm" style={{ width: 90 }}>space/{k}</code>
+      <span style={{ width: v || 1, height: 12, background: 'var(--kv-color-text-primary)' }} />
+    </div>
+  ))}
+</div>
+
+<div className="sb-unstyled" style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+  {Object.entries(radius).map(([k, v]) => (
+    <div key={k}>
+      <div style={{ width: 96, height: 64, border: '1px solid var(--kv-color-border-strong)', borderRadius: v }} />
+      <code className="kv-text-caps-sm">radius/{k}</code>
+    </div>
+  ))}
+</div>
+
+Touch targets ≥ 48 px; live-run controls 72 px.

@@ -1,0 +1,5 @@
+.root { margin: 0; border: 1px solid var(--kv-color-border-hairline); }
+.map { width: 100%; }
+/* Mapbox chrome in system type + tokens; logo and attribution stay visible (required by Mapbox). */
+.root :global(.mapboxgl-ctrl-attrib) { font-family: var(--kv-font-mono); font-size: 10px; letter-spacing: 0.05em; background: var(--kv-color-bg-canvas); color: var(--kv-color-text-tertiary); }
+.root :global(.mapboxgl-ctrl-attrib a) { color: var(--kv-color-text-secondary); }

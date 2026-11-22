@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/blocks';
+import { typography, fontFamily } from '../tokens/tokens';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Editorial **Instrument Serif** headlines, a quiet **Instrument Sans** for interface text, and **Chivo Mono** for caps labels and every number (tabular figures, plain zero — the LCD voice). Sizes are `rem`, so they follow the user's text size. Self-hosted for offline PWA use.
+
+<div className="sb-unstyled" style={{ display: 'grid', margin: '24px 0', color: 'var(--kv-color-text-primary)' }}>
+  {Object.entries(typography).map(([name, t]) => (
+    <div key={name} style={{ display: 'grid', gridTemplateColumns: '240px 1fr', alignItems: 'center', gap: 24, padding: '14px 0', borderTop: '1px solid var(--kv-color-border-hairline)' }}>
+      <div>
+        <code className="kv-text-caps-sm" style={{ display: 'block' }}>{name}</code>
+        <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{fontFamily[t.family].name} · {t.size}/{t.line}</span>
+      </div>
+      <span className={`kv-text-${name.replace('/', '-')}`}>{name.startsWith('data') ? '42:17' : name.startsWith('caps') ? 'Resting HR · 12 wk' : name.startsWith('display') || name.startsWith('heading') ? 'Recovered.' : 'HRV is up 6 ms — a good day for tempo.'}</span>
+    </div>
+  ))}
+</div>
+
+- Serif only at 28 px and up. Never set paragraphs in mono.
+- Caps labels (`caps/*`) are for short metadata; screen readers get natural case.
+- All numbers use `data/*` or `<Stat>` so columns line up.

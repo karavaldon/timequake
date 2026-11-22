@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/blocks';
+import { primitives, colors } from '../tokens/tokens';
+
+<Meta title="Foundations/Color" />
+
+# Color
+
+Black and white, like an LCD. Separate things with **hairlines, not fills**. Two accents only: **Volt** is the one action and the live signal in dark mode; **Mulberry** carries the accent and live signal in light. Every intended pair passes WCAG 2.2 AA (`npm run audit:contrast`).
+
+<div className="sb-unstyled" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', margin: '32px 0', border: '1px solid #3D3D3D' }}>
+  {['light', 'dark'].map((mode) => (
+    <div key={mode} data-theme={mode} style={{ background: 'var(--kv-color-bg-canvas)', color: 'var(--kv-color-text-primary)', padding: 40, display: 'grid', gap: 32, alignContent: 'start' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+        <span className="kv-text-heading-2">{mode === 'light' ? 'Light' : 'Dark'}</span>
+        <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{mode === 'dark' ? 'Mode · Dark — default' : 'Mode · Light'}</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: 20, background: 'var(--kv-color-bg-raised)', border: '1px solid var(--kv-color-border-hairline)' }}>
+        <div style={{ flex: 1, display: 'grid', gap: 4 }}>
+          <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>Elapsed</span>
+          <span className="kv-text-data-md" style={{ color: 'var(--kv-color-text-live)' }}>32:18</span>
+        </div>
+        <span className="kv-text-caps-md" style={{ background: 'var(--kv-color-bg-action)', color: 'var(--kv-color-text-on-action)', borderRadius: 999, padding: '12px 20px' }}>Start run</span>
+      </div>
+      {['bg', 'text', 'border', 'icon', 'data', 'map'].map((g) => (
+        <div key={g} style={{ display: 'grid', gap: 12 }}>
+          <span className="kv-text-caps-sm" style={{ paddingBottom: 8, borderBottom: '1px solid var(--kv-color-border-strong)' }}>{g}</span>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: '12px 16px' }}>
+            {Object.entries(colors).filter(([k]) => k.startsWith(g + '/')).map(([k, v]) => (
+              <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ flex: 'none', width: 40, height: 40, background: `var(--kv-color-${k.replace('/', '-')})`, boxShadow: 'inset 0 0 0 1px var(--kv-color-border-hairline)' }} />
+                <span style={{ display: 'grid', gap: 2 }}>
+                  <span className="kv-text-label-sm">{k.split('/')[1]}</span>
+                  <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{v[mode]}</span>
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
+## Primitives
+
+<div className="sb-unstyled" style={{ display: 'grid', gap: 16 }}>
+  {Object.entries(primitives).map(([fam, steps]) => (
+    <div key={fam} style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      {Object.entries(steps).map(([s, h]) => (
+        <div key={s} style={{ width: 80 }}>
+          <div style={{ height: 48, background: h, boxShadow: 'inset 0 0 0 1px #3D3D3D' }} />
+          <span className="kv-text-caps-sm" style={{ display: 'block', marginTop: 4 }}>{fam}/{s}</span>
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
+## Rules
+
+- **One action** — `bg/action` is the only filled button per screen.
+- **Live = accent** — `text/live`, `icon/live`, `map/route-live` mark what is happening now.
+- **Zones are labelled** — `data/zone-1…5` is a single-hue ramp; always show Z1–Z5.
+- **Hairlines, not boxes** — `border/hairline` is decorative; anything interactive uses `border/strong` or `border/input` (≥ 3:1).

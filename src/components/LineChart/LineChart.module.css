@@ -1,0 +1,7 @@
+.root { margin: 0; }
+.line { fill: none; stroke: var(--kv-color-data-line); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.grid { stroke: var(--kv-color-data-grid); stroke-width: 1; }
+.band { fill: var(--kv-color-data-band); }
+.dot { fill: var(--kv-color-data-highlight); }
+.tick { font-family: var(--kv-font-mono); font-size: 11px; letter-spacing: 0.05em; fill: var(--kv-color-text-tertiary); text-transform: uppercase; }
+.value { font-family: var(--kv-font-mono); font-size: 14px; fill: var(--kv-color-text-primary); }

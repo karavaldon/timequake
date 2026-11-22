@@ -1,0 +1,10 @@
+.root { display: grid; gap: 24px; }
+.status { display: flex; justify-content: space-between; align-items: center; }
+.zone { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-secondary); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; border-top: 1px solid var(--kv-color-border-hairline); padding-top: 20px; }
+.zones { display: grid; gap: 10px; align-content: start; }
+.zlabel { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }
+.blocks { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; align-items: end; }
+.blocks > span { display: grid; place-items: center; height: 28px; border: 1px solid var(--kv-color-border-strong); font-family: var(--kv-font-mono); font-size: 11px; color: var(--kv-color-text-secondary); }
+.blocks > span[data-on] { background: var(--kv-color-text-primary); color: var(--kv-color-text-inverse); }
+.blocks > span[data-cur] { height: 40px; background: var(--kv-color-data-highlight); border-color: var(--kv-color-data-highlight); color: var(--kv-color-text-on-accent); }

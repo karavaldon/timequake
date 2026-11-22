@@ -1,0 +1,8 @@
+.row { display: flex; align-items: center; gap: 16px; min-height: 64px; padding: 12px 0; border-bottom: 1px solid var(--kv-color-border-hairline); color: var(--kv-color-text-primary); text-decoration: none; width: 100%; background: transparent; border-top: 0; border-left: 0; border-right: 0; text-align: left; font: inherit; }
+.interactive { cursor: pointer; }
+.interactive:hover { background: var(--kv-color-bg-raised); }
+.text { flex: 1; display: grid; gap: 4px; min-width: 0; }
+.title { font-size: var(--kv-text-label-md-size); line-height: var(--kv-text-label-md-line); font-weight: 500; }
+.meta { font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-tertiary); }
+.trailing { color: var(--kv-color-text-primary); }
+.mono { font-family: var(--kv-font-mono); font-size: var(--kv-text-data-sm-size); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }

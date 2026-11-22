@@ -1,0 +1,11 @@
+.row { display: flex; align-items: center; gap: 16px; min-height: 56px; cursor: pointer; position: relative; }
+.text { flex: 1; display: grid; gap: 2px; }
+.label { font-size: var(--kv-text-label-md-size); font-weight: 500; }
+.desc { font-size: var(--kv-text-body-sm-size); color: var(--kv-color-text-secondary); }
+.input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.track { width: 44px; height: 24px; border-radius: 999px; border: 1.5px solid var(--kv-color-border-strong); display: inline-flex; align-items: center; padding: 2px; transition: background var(--kv-duration-fast); flex: none; }
+.knob { width: 16px; height: 16px; border-radius: 50%; background: var(--kv-color-text-primary); transition: transform var(--kv-duration-fast) var(--kv-ease-standard); }
+.input:checked + .track { background: var(--kv-color-bg-action); border-color: var(--kv-color-bg-action); }
+.input:checked + .track .knob { transform: translateX(20px); background: var(--kv-color-text-on-action); }
+.input:focus-visible + .track { outline: 2px solid var(--kv-color-border-focus); outline-offset: 2px; }
+.input:disabled + .track { opacity: 0.4; }

@@ -1,0 +1,12 @@
+.root { margin: 0; border: 1px solid var(--kv-color-border-hairline); line-height: 0; }
+.land { fill: var(--kv-color-map-land); }
+.grid { stroke: var(--kv-color-map-road); stroke-width: 1; fill: none; }
+.route, .routeLive { fill: none; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.route { stroke: var(--kv-color-map-route); }
+.routeLive { stroke: var(--kv-color-map-route-live); }
+.start { fill: var(--kv-color-map-land); stroke: var(--kv-color-map-route); stroke-width: 2; }
+.end { fill: var(--kv-color-map-route); }
+.now { fill: var(--kv-color-map-route-live); stroke: var(--kv-color-map-land); stroke-width: 3; }
+.marker { fill: var(--kv-color-map-route); }
+.markerText { font-family: var(--kv-font-mono); font-size: 10px; fill: var(--kv-color-map-land); }
+.thumb { margin: 0; line-height: 0; }

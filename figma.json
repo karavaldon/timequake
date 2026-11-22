@@ -1,0 +1,63 @@
+{
+  "fileKey": "unaZRobvOliiSLnm9h4YfI",
+  "url": "https://www.figma.com/design/unaZRobvOliiSLnm9h4YfI",
+  "pages": {
+    "Cover": "5:2",
+    "Color": "5:4",
+    "Type": "5:5",
+    "Layout": "5:6",
+    "Icons": "5:7",
+    "Core": "5:9",
+    "Running": "5:10",
+    "Screens": "5:12",
+    "Photography": "18:2"
+  },
+  "variables": {
+    "collections": [
+      "Primitives",
+      "Color (Light/Dark)",
+      "Dimensions",
+      "Typography"
+    ],
+    "note": "Color variable names match token names: bg/canvas \u2192 --kv-color-bg-canvas"
+  },
+  "components": {
+    "Button": "7:50",
+    "IconButton": "7:59",
+    "Tag": "7:67",
+    "Switch": "7:76",
+    "TextField": "7:95",
+    "SegmentedControl": "7:117",
+    "ListRow": "9:39",
+    "TopBar": "9:59",
+    "BottomNav": "9:152",
+    "DeviceStatus": "9:231",
+    "Toast": "9:153",
+    "Sheet": "9:232",
+    "Stat": "10:30",
+    "RouteMap": "10:103",
+    "LineChart": "10:131",
+    "BarChart": "10:132",
+    "ZoneBar": "10:151",
+    "SplitsTable": "11:4",
+    "RunRow": "11:83",
+    "LiveMetrics": "11:101",
+    "Favicon": "30:10"
+  },
+  "screens": {
+    "light": {
+      "Today": "12:2",
+      "LiveRun": "12:118",
+      "RunDetail": "12:241",
+      "Trends": "12:470",
+      "Gear": "12:580"
+    },
+    "dark": {
+      "Today": "12:728",
+      "LiveRun": "12:750",
+      "RunDetail": "12:764",
+      "Trends": "12:803",
+      "Gear": "12:824"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+.root { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border-top: 1px solid var(--kv-color-border-hairline); background: var(--kv-color-bg-canvas); padding-bottom: env(safe-area-inset-bottom); }
+.item { display: grid; justify-items: center; gap: 4px; padding: 10px 0 12px; min-height: 56px; color: var(--kv-color-text-tertiary); text-decoration: none; font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); letter-spacing: 0.1em; text-transform: uppercase; border-top: 2px solid transparent; margin-top: -1px; }
+.item[aria-current='page'] { color: var(--kv-color-text-primary); border-top-color: var(--kv-color-border-strong); }

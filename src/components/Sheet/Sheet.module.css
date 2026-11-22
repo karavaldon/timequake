@@ -1,0 +1,6 @@
+.sheet { margin: auto auto 0; width: 100%; max-width: 480px; border: 0; border-top: 1px solid var(--kv-color-border-strong); padding: 20px 20px calc(24px + env(safe-area-inset-bottom)); background: var(--kv-color-bg-canvas); color: var(--kv-color-text-primary); }
+.sheet::backdrop { background: rgba(0, 0, 0, 0.6); }
+.head { display: flex; align-items: center; justify-content: space-between; margin-right: -12px; padding-bottom: 12px; border-bottom: 1px solid var(--kv-color-border-hairline); }
+.body { display: grid; gap: 16px; padding-top: 16px; }
+@media (prefers-reduced-motion: no-preference) { .sheet[open] { animation: rise var(--kv-duration-base) var(--kv-ease-standard); } }
+@keyframes rise { from { transform: translateY(24px); opacity: 0; } }

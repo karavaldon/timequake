@@ -1,0 +1,4 @@
+.tag { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--kv-color-border-strong); font-family: var(--kv-font-mono); font-weight: 500; font-size: var(--kv-text-caps-sm-size); line-height: var(--kv-text-caps-sm-line); letter-spacing: 0.1em; text-transform: uppercase; color: var(--kv-color-text-primary); white-space: nowrap; }
+.live { border-color: var(--kv-color-border-focus); color: var(--kv-color-text-live); }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--kv-color-icon-live); }
+.inverse { background: var(--kv-color-bg-inverse); color: var(--kv-color-text-inverse); border-color: var(--kv-color-bg-inverse); }
