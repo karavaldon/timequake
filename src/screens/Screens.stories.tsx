@@ -19,7 +19,7 @@ import { Icon } from '../components/Icon';
 import { sampleGps, sampleRoute, sampleRun, sampleHr, weeks, restingHr, hrvTrend, weeklyMiles, sampleLog } from '../data/sample';
 import s from './Screens.module.css';
 
-const meta: Meta = { title: 'Screens/PWA', parameters: { layout: 'fullscreen', docs: { description: { component: 'Key PWA screens composed only from Timequake components. 390 × 844 frame. Every screen has one filled action at most.' } } } };
+const meta: Meta = { title: 'Screens/PWA', parameters: { layout: 'fullscreen', docs: { description: { component: 'Key PWA screens composed only from Timequake components. 375 × 812 frame (iPhone mini). Every screen has one filled action at most.' } } } };
 export default meta; type S = StoryObj;
 const token = import.meta.env.STORYBOOK_MAPBOX_TOKEN as string | undefined;
 const Head = ({ title, right }: { title: string; right?: string }) => <div className={s.head}><h2 className={s.capsPrimary} style={{ margin: 0 }}>{title}</h2>{right && <span className={s.caps}>{right}</span>}</div>;

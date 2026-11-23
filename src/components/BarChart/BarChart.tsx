@@ -4,7 +4,7 @@ import s from './BarChart.module.css';
 export interface BarChartProps { data: number[]; labels: string[]; unit: string; title: string; width?: number; height?: number; /** Index to highlight (default: last). */ highlight?: number; }
 
 /** Weekly volume bars: outlined past bars, solid current bar, accent cap. Hidden data table included. Figma: Running › Bar Chart. */
-export function BarChart({ data, labels, unit, title, width = 350, height = 160, highlight = data.length - 1 }: BarChartProps) {
+export function BarChart({ data, labels, unit, title, width = 335, height = 160, highlight = data.length - 1 }: BarChartProps) {
   const id = useId(); const max = Math.max(...data) * 1.1; const gap = 6; const bw = (width - gap * (data.length - 1)) / data.length; const base = height - 22;
   return (
     <figure className={s.root}>

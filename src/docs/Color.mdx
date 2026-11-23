@@ -5,14 +5,14 @@ import { primitives, colors } from '../tokens/tokens';
 
 # Color
 
-Black and white, like an LCD. Separate things with **hairlines, not fills**. Two accents only: **Volt** is the one action and the live signal in dark mode; **Mulberry** carries the accent and live signal in light. Every intended pair passes WCAG 2.2 AA (`npm run audit:contrast`).
+Mostly black and white, like an LCD. Separate things with **hairlines, not color fills**. Two lovely and vibrant accents: **Volt** is the one action and the live signal in dark mode; **Mulberry** carries the accent and live signal in light. Every intended pair passes WCAG 2.2 AA (`npm run audit:contrast`).
 
 <div className="sb-unstyled" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', margin: '32px 0', border: '1px solid #3D3D3D' }}>
   {['light', 'dark'].map((mode) => (
     <div key={mode} data-theme={mode} style={{ background: 'var(--kv-color-bg-canvas)', color: 'var(--kv-color-text-primary)', padding: 40, display: 'grid', gap: 32, alignContent: 'start' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <span className="kv-text-heading-2">{mode === 'light' ? 'Light' : 'Dark'}</span>
-        <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{mode === 'dark' ? 'Mode · Dark — default' : 'Mode · Light'}</span>
+        <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{mode === 'dark' ? 'Mode · Dark · Default' : 'Mode · Light'}</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: 20, background: 'var(--kv-color-bg-raised)', border: '1px solid var(--kv-color-border-hairline)' }}>
         <div style={{ flex: 1, display: 'grid', gap: 4 }}>
@@ -58,7 +58,7 @@ Black and white, like an LCD. Separate things with **hairlines, not fills**. Two
 
 ## Rules
 
-- **One action** — `bg/action` is the only filled button per screen.
-- **Live = accent** — `text/live`, `icon/live`, `map/route-live` mark what is happening now.
-- **Zones are labelled** — `data/zone-1…5` is a single-hue ramp; always show Z1–Z5.
-- **Hairlines, not boxes** — `border/hairline` is decorative; anything interactive uses `border/strong` or `border/input` (≥ 3:1).
+- **One action.** `bg/action` is the only filled button on a screen.
+- **Live means accent.** `text/live`, `icon/live` and `map/route-live` mark what's happening right now.
+- **Zones are labelled.** `data/zone-1…5` is a single-hue ramp, so always show Z1–Z5 in text too.
+- **Hairlines, not boxes.** `border/hairline` is decorative. Anything you can tap or type in uses `border/strong` or `border/input`, which reach at least 3:1.

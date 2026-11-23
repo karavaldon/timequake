@@ -4,10 +4,10 @@
 <style>
   /* Sidebar section headings in mono caps, like the system's labels */
   .sidebar-subheading { font-family: "Chivo Mono", ui-monospace, monospace !important; letter-spacing: 0.1em !important; }
-  /* Hairline between sidebar (canvas) and main area (raised) — same colour as the toolbar's bottom rule (appBorderColor) */
+  /* Hairline between sidebar (canvas) and main area (raised), same colour as the toolbar's bottom rule (appBorderColor) */
   .sidebar-container { box-shadow: inset -1px 0 0 #2A2A2A; }
   /* Sidebar type icons (group, component, doc, story): Storybook hardcodes a hue per type; use volt/400 for all.
-     svg[viewBox="0 0 14 14"] is the type icon only — the expand chevron has its own fill. */
+     svg[viewBox="0 0 14 14"] is the type icon only; the expand chevron has its own fill. */
   [data-nodetype] svg[viewBox="0 0 14 14"] { color: #D4FF3D !important; }
   /* Selected row: volt/400 fill, ink label + icon (paper on volt would fail contrast) */
   [data-selected="true"][data-item-id],

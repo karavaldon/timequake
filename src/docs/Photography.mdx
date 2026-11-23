@@ -6,10 +6,10 @@ import { photoSlots, photoSrc } from '../data/photos';
 
 # Photography
 
-Real runs, shot on real days. Photos are black and white like the rest of the system — light, grain and place do the work. They sit beside the data, never behind it.
+Photography should be black and white like the rest of the system. Photographs should be real.
 
 <div className="sb-unstyled" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 32, margin: '24px 0 40px' }}>
-  {[['Black and white', 'Every photo is monochrome. Push contrast, keep true blacks. Film grain is welcome.'], ['Real, not stock', 'Your routes, your shoes, your weather. Bodies in motion and places over posed faces.'], ['Text beside, not on', 'No type over photos and no gradient scrims. Captions go below in caps.'], ['No accent on photos', 'Volt and mulberry stay in the UI. Never tint, duotone or colour-grade.']].map(([h, b]) => (
+  {[['Black and white', 'Every photo is monochrome. Film grain is welcome.'], ['Real, not stock', 'Bodies in motion, cool places; no posed faces.'], ['Text beside, not on', 'Try to avoid type over photos in-app, and no gradient scrims.'], ['No accent on photos', "Volt and mulberry stay in the UI. Don't use them to tint."]].map(([h, b]) => (
     <div key={h} style={{ borderTop: '1px solid var(--kv-color-border-strong)', paddingTop: 16, display: 'grid', gap: 8 }}>
       <span className="kv-text-title">{h}</span>
       <span className="kv-text-body-sm" style={{ color: 'var(--kv-color-text-secondary)' }}>{b}</span>
@@ -27,7 +27,7 @@ Real runs, shot on real days. Photos are black and white like the rest of the sy
 
 ## Library
 
-Drop files into `public/photos/` with these names — each slot fills in as soon as its file exists. Then update its `alt` in `src/data/photos.ts`.
+Drop files into `public/photos/` with these names. Each slot fills in as soon as its file exists. Then update its `alt` text in `src/data/photos.ts`.
 
 <div className="sb-unstyled" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 24, margin: '16px 0 40px' }}>
   {Object.entries(photoSlots).map(([k, p]) => (
@@ -37,8 +37,8 @@ Drop files into `public/photos/` with these names — each slot fills in as soon
 
 ## Treatment
 
-- **Colour** — monochrome. `<Photo>` applies `grayscale(1) contrast(1.1)`; export already-converted files when you can.
-- **Contrast** — deep blacks, clean whites. Don't crush detail in shoes or sky.
-- **Grain** — keep it. At small sizes it reads like the system's LCD texture.
-- **Crop** — subject off-centre, horizon low, room to breathe. The UI never overlays.
-- **Alt text** — describe what's in it ("Runner crossing the Pfluger bridge at dawn"). Purely decorative photos (the share-card background) get `alt=""`.
+- **Colour.** Monochrome. `<Photo>` applies `grayscale(1) contrast(1.1)`, but export files already converted when you can.
+- **Contrast.** Deep blacks and clean whites. Don't crush the detail in shoes or sky.
+- **Grain.** Keep it. At small sizes it reads like the system's LCD texture.
+- **Crop.** Put the subject off-centre, keep the horizon low and leave room to breathe. The UI never sits on top.
+- **Alt text.** Describe what's actually in the photo ("Runner crossing the Pfluger bridge at dawn"). Purely decorative photos, like the share-card background, get `alt=""`.

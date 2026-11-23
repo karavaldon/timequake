@@ -28,6 +28,6 @@ for (const id of ids) for (const theme of ['light', 'dark']) {
   const v = await page.evaluate(async () => (await window.axe.run('#storybook-root')).violations.map((x) => `${x.id} (${x.nodes.length})`));
   if (v.length) { failures++; console.log(`✗ ${id} [${theme}]`, v.join(', ')); }
 }
-console.log(`${ids.length} stories × 2 themes — ${failures ? failures + ' with violations' : 'no axe violations'}`);
+console.log(`${ids.length} stories × 2 themes: ${failures ? failures + ' with violations' : 'no axe violations'}`);
 await browser.close(); server.close();
 process.exit(failures ? 1 : 0);

@@ -17,7 +17,7 @@ export interface LineChartProps {
 }
 
 /** Thin monochrome line chart: one line, hairline grid, mono labels, accent only on the latest point. Includes a visually-hidden data table. Figma: Running › Line Chart. */
-export function LineChart({ data, labels = [], band, unit, title, width = 350, height = 180, highlightLast = true, yTicks = 3 }: LineChartProps) {
+export function LineChart({ data, labels = [], band, unit, title, width = 335, height = 180, highlightLast = true, yTicks = 3 }: LineChartProps) {
   const id = useId();
   const pad = { l: 0, r: 44, t: 12, b: labels.length ? 24 : 8 };
   const lo = Math.min(...data, ...(band ?? [])), hi = Math.max(...data, ...(band ?? []));

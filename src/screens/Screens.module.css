@@ -1,4 +1,4 @@
-.phone { width: 390px; min-height: 844px; margin: 0 auto; background: var(--kv-color-bg-canvas); color: var(--kv-color-text-primary); display: flex; flex-direction: column; border: 1px solid var(--kv-color-border-hairline); }
+.phone { width: 375px; min-height: 812px; margin: 0 auto; background: var(--kv-color-bg-canvas); color: var(--kv-color-text-primary); display: flex; flex-direction: column; border: 1px solid var(--kv-color-border-hairline); }
 .main { flex: 1; padding: 0 20px 32px; display: grid; gap: 32px; align-content: start; }
 .section { display: grid; gap: 16px; }
 .head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--kv-color-border-strong); padding-bottom: 8px; }

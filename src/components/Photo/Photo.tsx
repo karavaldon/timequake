@@ -9,7 +9,7 @@ export interface PhotoProps {
   /** Describe what's in the photo. Use "" only for purely decorative images. */
   alt: string;
   ratio?: PhotoRatio;
-  /** Black-and-white treatment (grayscale + a little contrast). Default on — the system has no colour photos. */
+  /** Black-and-white treatment (grayscale + a little contrast). On by default, since the system has no colour photos. */
   mono?: boolean;
   /** Caps caption below the photo. Never on top of it. */
   caption?: string;

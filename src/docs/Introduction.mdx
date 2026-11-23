@@ -4,7 +4,7 @@ import accents from './assets/accents.svg';
 
 <Meta title="Introduction" />
 
-{/* Cover — Figma node 6:2. Sizes scale with the container (Figma frame is 1920 wide: 1cqw = 19.2px). */}
+{/* Cover, from Figma node 6:2. Sizes scale with the container (Figma frame is 1920 wide: 1cqw = 19.2px). */}
 <div
   className="sb-unstyled"
   data-theme="dark"
@@ -35,26 +35,16 @@ import accents from './assets/accents.svg';
 ## Principles
 
 1. **Black and white first.** Like an LCD. Hairlines separate things; fills are rare.
-2. **One action, one accent.** `bg/action` is the only filled button on a screen (black in light, Volt in dark). Mulberry and Volt mark what's *live*.
-3. **Numbers are mono.** Every number is Chivo Mono with tabular figures — readable mid-stride, never jumpy.
-4. **Words are human.** Serif headlines speak like a person ("Recovered."), caps labels stay out of the way.
-5. **Casio, not a watch.** Borrow the F-91W's restraint — printed caps, square corners, tight grids — never draw an LCD screen.
-6. **Accessible by construction.** Every color pair is audited (text 4.5:1, graphics 3:1); zones are labelled, not colour-coded; live targets are 72 px.
-
-## Use
-
-```tsx
-import '@karavaldon/timequake/styles';
-import { Button, Stat, RouteMap, LineChart } from '@karavaldon/timequake';
-```
-
-Themes: `data-theme="light" | "dark"` on any ancestor (dark is the default story theme). Tokens live in `tokens/source.mjs` → `npm run tokens`.
+2. **One action, one accent.** `bg/action` is the only filled button on a screen (black in light, Volt in dark). Mulberry and Volt mark what's live, actionable or in progress.
+3. **Numbers are mono.** Every number is Chivo Mono. Readable mid-stride.
+4. **Words are warm.** Serif headlines say valuable, nice things every day.
+5. **Accessibility built-in.** Every color pair is audited (text 4.5:1, graphics 3:1); zones are labelled, not colour-coded; live targets are 72 px.
 
 ## What's here
 
-- **Foundations** — Color (Light/Dark), Typography, Spacing & Shape, Icons.
-- **Core** — Button, Icon Button, Text Field, Switch, Segmented Control, List Row, Tag, Top Bar, Bottom Nav, Sheet, Toast, Device Status.
-- **Running** — Stat, Live Metrics, Route Map (offline SVG), Run Map (Mapbox, B&W from tokens), Line Chart, Bar Chart, Zone Bar, Splits Table, Run Row.
-- **Screens** — Today, Live run, Run detail, Trends, Run log, Gear. Composed only from the above.
+- **Foundations:** Color (light and dark), Typography, Spacing & Shape, Photography.
+- **Core:** Button, Text Field, Switch, Segmented Control, List Row, Tag, Photo, Top Bar, Bottom Nav, Sheet, Toast, Device Status.
+- **Running:** Stat, Live Metrics, Route Map (offline SVG), Run Map (Mapbox, black and white from tokens), Line Chart, Bar Chart, Zone Bar, Splits Table, Run Row.
+- **Screens:** Today, Live Run, Run Detail, Trends, Run Log, Devices. Each one is built only from the pieces above.
 
-Figma: [Timequake](https://www.figma.com/design/unaZRobvOliiSLnm9h4YfI) — same names, same variables.
+The [Timequake Figma file](https://www.figma.com/design/unaZRobvOliiSLnm9h4YfI) uses the same names and the same variables.

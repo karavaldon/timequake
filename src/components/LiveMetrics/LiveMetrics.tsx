@@ -9,7 +9,7 @@ export interface LiveMetricsProps {
 const ZN = ['Recovery', 'Endurance', 'Tempo', 'Threshold', 'Max'];
 const said = (t: string) => { const p = t.split(':').map(Number); const [h, m, sec] = p.length === 3 ? p : [0, ...p]; return `${h ? h + ' h ' : ''}${m} min ${sec} s`; };
 
-/** The live-run readout: elapsed (hero), pace, distance, heart rate + zone. Not a live region — announce laps / zone changes with Toast. Figma: Running › Live Metrics. */
+/** The live-run readout: elapsed (hero), pace, distance, heart rate + zone. Not a live region; announce laps and zone changes with Toast. Figma: Running › Live Metrics. */
 export function LiveMetrics({ elapsed, pace, distance, heartRate, zone, unit = 'mi', paused }: LiveMetricsProps) {
   return (
     <section className={s.root} aria-label={paused ? 'Live run, paused' : 'Live run'}>

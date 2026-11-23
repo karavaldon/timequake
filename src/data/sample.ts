@@ -43,7 +43,7 @@ export const sampleLog = [
 
 /**
  * Approximate GPS track ([lng, lat]) of the Butler Trail loop, Mopac bridge → Congress Ave bridge,
- * Lady Bird Lake, Austin. Hand-traced demo data — swap in a real recorded track for production.
+ * Lady Bird Lake, Austin. Hand-traced demo data. Swap in a real recorded track for production.
  */
 export const sampleGps: [number, number][] = (() => {
   const way: [number, number][] = [

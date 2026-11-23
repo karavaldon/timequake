@@ -1,6 +1,6 @@
 # Photos
 
-Drop black-and-white (or colour — the component converts) JPGs here with these names.
+Drop black-and-white (or colour, since the component converts them) JPGs here with these names.
 Until a file exists, the app shows a labelled placeholder. Names match the Figma Photography page.
 
 | File | Crop | Use |

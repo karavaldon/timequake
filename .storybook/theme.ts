@@ -6,9 +6,9 @@ export default create({
   brandTitle: 'Timequake',
   brandUrl: 'https://karavaldon.com',
   colorPrimary: '#D4FF3D',   // volt
-  colorSecondary: '#862662', // mulberry/600 — selected sidebar item (white text on it passes AA)
-  appBg: '#121212',          // sidebar/nav — bg/canvas (dark, ink/1000)
-  appContentBg: '#202020',   // main body + docs pages — bg/raised (dark, ink/900)
+  colorSecondary: '#862662', // mulberry/600, selected sidebar item (white text on it passes AA)
+  appBg: '#121212',          // sidebar/nav: bg/canvas (dark, ink/1000)
+  appContentBg: '#202020',   // main body + docs pages: bg/raised (dark, ink/900)
   appPreviewBg: '#202020',   // bg/raised (dark, ink/900)
   appBorderColor: '#2A2A2A',
   appBorderRadius: 0,

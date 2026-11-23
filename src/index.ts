@@ -1,4 +1,4 @@
-// Timequake v2 — public API. Import styles once: import '@karavaldon/timequake/src/styles/global.css'
+// Timequake v2 public API. Import styles once: import '@karavaldon/timequake/src/styles/global.css'
 export * from './tokens/tokens';
 export * from './components/Icon';
 export * from './components/Text';

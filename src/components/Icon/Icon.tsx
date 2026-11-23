@@ -1,6 +1,6 @@
 import { icons, type LucideProps } from 'lucide-react';
 
-/** Kebab-case Lucide name — same as the Figma icon/* components ("heart-pulse", "map-pin"). */
+/** Kebab-case Lucide name, the same as the Figma icon/* components ("heart-pulse", "map-pin"). */
 export type IconName = string;
 const toPascal = (n: string) => n.replace(/(^|-)(\w)/g, (_, __, c: string) => c.toUpperCase());
 
@@ -12,7 +12,7 @@ export interface IconProps extends Omit<LucideProps, 'ref'> {
   label?: string;
 }
 
-/** Thin-line Lucide icon at a 1.5 stroke — the printed-glyph look. Never filled. */
+/** Thin-line Lucide icon at a 1.5 stroke for the printed-glyph look. Never filled. */
 export function Icon({ name, size = 24, label, strokeWidth = 1.5, ...rest }: IconProps) {
   const Cmp = icons[toPascal(name) as keyof typeof icons];
   if (!Cmp) { if (import.meta.env.DEV) console.warn(`[Icon] unknown icon "${name}"`); return null; }

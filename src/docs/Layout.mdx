@@ -5,7 +5,7 @@ import { spacing, radius } from '../tokens/tokens';
 
 # Spacing & shape
 
-A **4-point** grid. Phone first: 390 px, **20 px margins**, 4 columns, 12 px gutters. Mostly **square corners**, like printed matter — pills only for the primary action and tags. No soft shadows: a hairline is the only elevation.
+A **4-point** grid. iPhone mini first (iykyk): 375 px, **20 px margins**, 4 columns, 12 px gutters. Mostly **square corners**, like printed matter or LCD displays. Pills only for the primary action (touchable stuff) and tags. No soft shadows: a hairline is the only elevation.
 
 <div className="sb-unstyled" style={{ display: 'grid', gap: 6, margin: '24px 0' }}>
   {Object.entries(spacing).map(([k, v]) => (
@@ -25,4 +25,4 @@ A **4-point** grid. Phone first: 390 px, **20 px margins**, 4 columns, 12 px gut
   ))}
 </div>
 
-Touch targets ≥ 48 px; live-run controls 72 px.
+Touch targets are at least 48 px, and live-run controls are 72 px.

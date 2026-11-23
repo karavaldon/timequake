@@ -5,7 +5,7 @@ import { typography, fontFamily } from '../tokens/tokens';
 
 # Typography
 
-Editorial **Instrument Serif** headlines, a quiet **Instrument Sans** for interface text, and **Chivo Mono** for caps labels and every number (tabular figures, plain zero — the LCD voice). Sizes are `rem`, so they follow the user's text size. Self-hosted for offline PWA use.
+Editorial **Instrument Serif** headlines add a dose of warm character, a readable **Instrument Sans** for interface text, and **Chivo Mono** for caps labels and numbers. Sizes are `rem`, so they follow the user's text size. Self-hosted for offline PWA use.
 
 <div className="sb-unstyled" style={{ display: 'grid', margin: '24px 0', color: 'var(--kv-color-text-primary)' }}>
   {Object.entries(typography).map(([name, t]) => (
@@ -14,11 +14,28 @@ Editorial **Instrument Serif** headlines, a quiet **Instrument Sans** for interf
         <code className="kv-text-caps-sm" style={{ display: 'block' }}>{name}</code>
         <span className="kv-text-caps-sm" style={{ color: 'var(--kv-color-text-tertiary)' }}>{fontFamily[t.family].name} · {t.size}/{t.line}</span>
       </div>
-      <span className={`kv-text-${name.replace('/', '-')}`}>{name.startsWith('data') ? '42:17' : name.startsWith('caps') ? 'Resting HR · 12 wk' : name.startsWith('display') || name.startsWith('heading') ? 'Recovered.' : 'HRV is up 6 ms — a good day for tempo.'}</span>
+      <span className={`kv-text-${name.replace('/', '-')}`}>{({
+        'display/xl': 'So it goes.',
+        'display/lg': 'Poo-tee-weet?',
+        'heading/1': 'Billy Pilgrim has come unstuck in time.',
+        'heading/2': 'We are what we pretend to be.',
+        'title': "You were sick, but now you're well again, and there's work to do.",
+        'body/lg': "We are here on Earth to fart around, and don't let anybody tell you different.",
+        'body/md': "There's only one rule that I know of, babies: God damn it, you've got to be kind.",
+        'body/sm': "If this isn't nice, what is?",
+        'label/md': 'Everything was beautiful and nothing hurt.',
+        'label/sm': 'Hi ho.',
+        'caps/md': 'Kurt Vonnegut · Timequake',
+        'caps/sm': 'Slaughterhouse-Five · 1969',
+        'data/xl': '2001',
+        'data/lg': '1991',
+        'data/md': '42:17',
+        'data/sm': '5:31 /mi',
+      })[name] ?? 'So it goes.'}</span>
     </div>
   ))}
 </div>
 
-- Serif only at 28 px and up. Never set paragraphs in mono.
-- Caps labels (`caps/*`) are for short metadata; screen readers get natural case.
-- All numbers use `data/*` or `<Stat>` so columns line up.
+- Use the serif only at 28 px and up. Never set paragraphs in mono.
+- Caps labels (`caps/*`) are for short metadata. Screen readers still get natural case.
+- Every number uses `data/*` or `<Stat>`, so columns line up.

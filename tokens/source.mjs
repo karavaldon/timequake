@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// TIMEQUAKE v2 — single source of truth.
+// TIMEQUAKE v2: single source of truth.
 // A running PWA that pairs with a watch + a sports sensor strap.
 // Look: stark black & white (LCD, Co–Star), Casio F-91W restraint, two accents:
 //   Volt (the one action / live signal in dark) and Mulberry (accent in light).
@@ -8,21 +8,21 @@
 export const PREFIX = 'kv';
 
 export const primitives = {
-  // Neutral ramp — true greys for the steps in between. Canvas & text use paper/ink below.
+  // Neutral ramp: true greys for the steps in between. Canvas & text use paper/ink below.
   gray: { 0:'#FFFFFF', 50:'#F5F5F5', 100:'#EBEBEB', 200:'#D6D6D6', 300:'#B3B3B3', 400:'#8A8A8A', 500:'#6B6B6B', 600:'#525252', 700:'#3D3D3D', 800:'#262626', 900:'#141414', 950:'#0A0A0A', 1000:'#000000' },
-  // Paper & ink — the softened white and black used for every canvas and text colour.
+  // Paper & ink: the softened white and black used for every canvas and text colour.
   // Pure #FFF/#000 vibrate against each other; these keep the B&W look at ~17:1.
   paper: { 0:'#F3F2EE', 50:'#EEEDE9', 100:'#E4E3DE' },
   ink:   { 1000:'#121212', 950:'#181818', 900:'#202020' },
   volt:     { 300:'#E4FF7A', 400:'#D4FF3D', 600:'#93B80F', 800:'#4A5C08' },
   mulberry: { 300:'#DA84B5', 400:'#C65A97', 600:'#862662', 700:'#6B1A4E', 900:'#340C27' },
-  // Errors only. Kept quiet — the system is B&W first.
+  // Errors only. Kept quiet, since the system is B&W first.
   red:      { 300:'#FF8A8A', 600:'#C21E2E' },
 };
 
 // Semantic colors: [light, dark]
 export const semantic = {
-  // Surfaces — flat; separate things with hairlines, not fills.
+  // Surfaces: flat; separate things with hairlines, not fills.
   'bg/canvas':           ['paper.0','ink.1000'],
   'bg/raised':           ['paper.50','ink.900'],     // sheets, menus, pressed rows
   'bg/inverse':          ['ink.1000','paper.0'],
@@ -35,7 +35,7 @@ export const semantic = {
   // Text
   'text/primary':        ['ink.1000','paper.0'],
   'text/secondary':      ['gray.600','gray.300'],
-  'text/tertiary':       ['gray.500','gray.400'],    // labels, meta — still ≥4.5:1
+  'text/tertiary':       ['gray.500','gray.400'],    // labels, meta; still ≥4.5:1
   'text/disabled':       ['gray.400','gray.600'],
   'text/inverse':        ['paper.0','ink.1000'],
   'text/on-action':      ['paper.0','ink.1000'],
@@ -54,13 +54,13 @@ export const semantic = {
   'icon/secondary':      ['gray.500','gray.400'],
   'icon/accent':         ['mulberry.700','mulberry.300'],
   'icon/live':           ['mulberry.700','volt.400'],
-  // Data viz — monochrome first; one highlight
+  // Data viz: monochrome first; one highlight
   'data/line':           ['ink.1000','paper.0'],
   'data/line-muted':     ['gray.400','gray.600'],
   'data/grid':           ['gray.200','gray.800'],
   'data/highlight':      ['mulberry.700','volt.400'],
   'data/band':           ['paper.100','ink.900'],    // ranges (e.g. normal HRV)
-  // HR zones — a single-hue ramp, always labelled (Z1–Z5), never colour alone
+  // HR zones: a single-hue ramp, always labelled (Z1–Z5), never colour alone
   'data/zone-1':         ['gray.400','gray.500'],
   'data/zone-2':         ['gray.500','gray.400'],
   'data/zone-3':         ['gray.700','gray.300'],

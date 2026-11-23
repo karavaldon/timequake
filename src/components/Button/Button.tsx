@@ -13,7 +13,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-/** Caps label in mono — like the printed words on a Casio case. Figma: Core › Button. */
+/** Caps label in mono, like the printed words on a Casio case. Figma: Core › Button. */
 export function Button({ variant = 'primary', size = 'md', icon, fullWidth, className, children, type = 'button', ...rest }: ButtonProps) {
   return (
     <button type={type} className={cx(s.btn, s[variant], s[size], fullWidth && s.full, className)} {...rest}>

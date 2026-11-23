@@ -71,7 +71,7 @@ export function RunMap({ coordinates, accessToken, theme, styleUrl, live, intera
   }, [accessToken, resolved, styleUrl, live, interactive, coordinates]);
 
   if (!accessToken) {
-    return <RouteMap route={toNormalised(coordinates.map(([lng, lat]) => [lat, lng]))} width={350} height={height} live={live} label={label} />;
+    return <RouteMap route={toNormalised(coordinates.map(([lng, lat]) => [lat, lng]))} width={335} height={height} live={live} label={label} />;
   }
   return (
     <figure className={s.root} aria-labelledby={capId}>

@@ -2,7 +2,7 @@ import { useId } from 'react';
 import s from './RouteMap.module.css';
 
 export interface RouteMapProps {
-  /** Route as normalised [x, y] (0–1) — project GPS to the viewport first, or use toNormalised(). */
+  /** Route as normalised [x, y] (0–1). Project GPS to the viewport first, or use toNormalised(). */
   route: [number, number][];
   width?: number; height?: number;
   /** Live = accent route + current-position dot at the end. */
@@ -11,7 +11,7 @@ export interface RouteMapProps {
   markers?: { at: number; label: string }[];
   /** Accessible summary: "6.21-mile loop around Lady Bird Lake". */
   label: string;
-  /** Route only, no basemap, smaller marks — for list thumbnails. */
+  /** Route only, with no basemap and smaller marks. For list thumbnails. */
   thumbnail?: boolean;
 }
 
@@ -24,7 +24,7 @@ export function toNormalised(points: [number, number][], pad = 0.08): [number, n
 }
 
 /** Offline route sketch: the GPS line on a plain square grid. For real streets use RunMap (Mapbox), which falls back to this. Figma: Running › Route Map. */
-export function RouteMap({ route, width = 350, height = 260, live, markers = [], label, thumbnail }: RouteMapProps) {
+export function RouteMap({ route, width = 335, height = 260, live, markers = [], label, thumbnail }: RouteMapProps) {
   const id = useId();
   const P = ([x, y]: [number, number]) => `${(x * width).toFixed(1)},${(y * height).toFixed(1)}`;
   const d = route.map((p, i) => (i ? 'L' : 'M') + P(p)).join(' ');
